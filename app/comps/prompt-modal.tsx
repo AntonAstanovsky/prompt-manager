@@ -6,7 +6,19 @@ import { useCallback, useContext, useEffect, useMemo, useState } from "react";
 import { DataContext } from "../page";
 
 const styled = {
-  span: 250,
+  span: 90,
+};
+
+const itemStyle: React.CSSProperties = {
+  textAlign: 'left',
+  width: `${styled.span}px`,
+  padding: ".2rem .3rem",
+};
+
+const itemStyleVar: React.CSSProperties = {
+  textAlign: 'left',
+  width: `${styled.span * 1.5}px`,
+  padding: ".2rem .3rem",
 };
 
 type FieldType = {
@@ -27,7 +39,7 @@ const getBodyVarList = (body: string): BodyVarListType[] => {
   let result: BodyVarListType[] = [];
   const varRegex = /\{(.*?)\}/g;
   let tempBody = body;
-  let checkNext = varRegex.exec(tempBody) ?? { done: true };
+  let checkNext: any = varRegex.exec(tempBody) ?? { done: true };
   while(!checkNext?.done || checkNext?.length > 1) {
     result.push({
       key: checkNext[1],
@@ -123,9 +135,9 @@ const PromptModal = (props: {
           labelCol={{
             span: styled.span
           }}
-          wrapperCol={{
-            span: styled.span * 1.5,
-          }}
+          // wrapperCol={{
+          //   span: styled.span * 1.5,
+          // }}
           form={form}
           initialValues={{
             title: prop?.title,
@@ -141,6 +153,12 @@ const PromptModal = (props: {
               { required: true, message: 'Please input a Title'},
               { min: 3, message: 'Min length is 3 characters' },
             ]}
+            labelCol={{
+              style: itemStyle,
+            }}
+            wrapperCol={{
+              span: styled.span * 1.5,
+            }}
           >
             <Input placeholder="title" />
           </Form.Item>
@@ -150,9 +168,15 @@ const PromptModal = (props: {
             rules={[
               { required: true, message: 'Please input a Category'},
             ]}
+            labelCol={{
+              style: itemStyle,
+            }}
+            wrapperCol={{
+              span: styled.span * 1.5,
+            }}
           >
             <Select
-              style={{ width: `${styled.span}px` }}
+              style={{ width: `${styled.span * 2}px` }}
               placeholder="Category"
               options={PromptCategories}
               allowClear
@@ -165,9 +189,15 @@ const PromptModal = (props: {
               { required: true, message: 'Please input a Body'},
               { min: 10, message: 'Min length is 10 characters' },
             ]}
+            labelCol={{
+              style: itemStyle,
+            }}
+            wrapperCol={{
+              span: styled.span * 2,
+            }}
           >
             <Input.TextArea
-              style={{ width: `${styled.span * 1.5}px`, height: '150px' }}
+              style={{ width: `${styled.span * 2}px`, height: '150px' }}
               placeholder="Body"
               
             />
@@ -179,6 +209,9 @@ const PromptModal = (props: {
           layout={'inline'}
           labelCol={{
             span: styled.span
+          }}
+          style={{
+            marginTop: ".2rem",
           }}
           wrapperCol={{
             span: styled.span * 1.5,
@@ -198,6 +231,9 @@ const PromptModal = (props: {
                       key={item.key}
                       label={`Variable "${item.key}"`}
                       name={item.key}
+                      labelCol={{
+                        style: itemStyleVar,
+                      }}
                     >
                       <Input placeholder="" />
                     </Form.Item>

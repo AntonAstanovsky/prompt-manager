@@ -4,7 +4,7 @@ import {
   SearchForm,
   SearchResults,
 } from "../comps";
-import { createContext, useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { SearchDataType } from "./search_results";
 import PromptModal from "./prompt-modal";
 import { DataContext } from "../page";
