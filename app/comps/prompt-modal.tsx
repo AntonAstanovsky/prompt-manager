@@ -100,6 +100,7 @@ const PromptModal = (props: {
       body: prop?.body,
     });
     setPaintedBody(prop?.body ?? "");
+    bodyForm.resetFields();
   }, [prop]);
 
   useEffect(() => {
@@ -205,7 +206,7 @@ const PromptModal = (props: {
               }
               </Flex>
               <Form.Item>
-                <Button type="primary" htmlType="submit">Save Values</Button>
+                <Button type="primary" htmlType="submit">Preview with Values</Button>
               </Form.Item>
             </>
           }
