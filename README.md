@@ -1,6 +1,14 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+1. Time Spent: ~7.5 hours
+2. assumptions and decisions:
+    2.1 promp can be opened by clicking on it
+    2.2 promps can be edited / saved. has a constant initial bank of them. updates will be lost when session ends
+    2.3 variables can be added when updating the body section in the editor
+3. if i had more time could improve:
+    open editor as a new tab - this should enable users to view many propts simultaneously / generate a link to a specific prompt allowing them to save to favourites and ext.
+
+4. ## Getting Started
 
 First, run the development server:
 

@@ -1,0 +1,15 @@
+[00:00:01.140] Server  LOG     ✓ Ready in 815ms
+[00:00:07.090] Server  LOG     ○ Compiling / ...
+[00:00:08.676] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:15.256] Browser LOG     tempBody:  {"checkNext":["{value 1}","value 1"],"tempBody":"Sample body text for a prompt with values. {value 1} and {value 2}"}
+[00:00:15.256] Browser LOG     tempBody:  {"checkNext":["{value 2}","value 2"],"tempBody":"Sample body text for a prompt with values. {value 1} and {value 2}"}
+[00:00:15.256] Browser LOG     getBodyVarList result:  [{"fullKey":"{value 1}","key":"value 1","value":""},{"fullKey":"{value 2}","key":"value 2","value":""}]
+[00:00:20.197] Browser LOG     tempBody:  {"checkNext":["{value 4}","value 4"],"tempBody":"Sample body text for a prompt with values. {value 4} and {value 1}"}
+[00:00:20.197] Browser LOG     tempBody:  {"checkNext":["{value 1}","value 1"],"tempBody":"Sample body text for a prompt with values. {value 4} and {value 1}"}
+[00:00:20.197] Browser LOG     getBodyVarList result:  [{"fullKey":"{value 4}","key":"value 4","value":""},{"fullKey":"{value 1}","key":"value 1","value":""}]
+[00:00:24.476] Browser LOG     tempBody:  {"checkNext":["{value 1}","value 1"],"tempBody":"Sample body text for a prompt with values. {value 1} and {value 2}"}
+[00:00:24.476] Browser LOG     tempBody:  {"checkNext":["{value 2}","value 2"],"tempBody":"Sample body text for a prompt with values. {value 1} and {value 2}"}
+[00:00:24.476] Browser LOG     getBodyVarList result:  [{"fullKey":"{value 1}","key":"value 1","value":""},{"fullKey":"{value 2}","key":"value 2","value":""}]
+[00:00:28.046] Browser LOG     tempBody:  {"checkNext":["{value 4}","value 4"],"tempBody":"Sample body text for a prompt with values. {value 4} and {value 1}"}
+[00:00:28.046] Browser LOG     tempBody:  {"checkNext":["{value 1}","value 1"],"tempBody":"Sample body text for a prompt with values. {value 4} and {value 1}"}
+[00:00:28.046] Browser LOG     getBodyVarList result:  [{"fullKey":"{value 4}","key":"value 4","value":""},{"fullKey":"{value 1}","key":"value 1","value":""}]
